@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+}
+
+.nav1{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 1px 3px gray ;
+}
+.logo img{
+    width: 100px;
+    margin-left: 95px;
+    /* height: 20px; */
+}
+
+.search{
+    flex: 2;
+}
+
+.logo{
+    flex: 1;
+}
+
+.r-icons{
+    flex: 1;
+    text-align: right;
+    margin: 0px 8px;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+    padding: 6px 10px;
+    margin-right: 15px;
+}
+
+.search label input{
+    padding: 6px 10px;
+    width: 70%;
+    /* border: none; */
+    border: 1px solid gray;
+    outline: none;
+}
+
+.search label i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8px 15px;
+    color: grey;
+    background: #dfe6e9;
+}
+
+.r-icons i {
+    margin-left: 30px;
+    cursor: pointer;
+    /* color: #636e72; */
+    font-size: 20px;
+}
+
+.nav2{
+    width: 90px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px #dfe6e9;
+    
+}
+
+#menubar{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.nav2 a{
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    padding: 10px 5px;
+    margin: 10px 0px;
+}
+
+.nav2 a:hover{
+   background-color: rgba(0,0,0,0.1); 
+}
+
+.nav2 i {
+  font-size: 20px; 
+  margin-bottom: 5px; 
+
+}
+
+.cart{
+    width: 100vw;
+    height: 250px;
+    margin: auto;
+}
+
+.cart img {
+    width: 100%;
+    height: 100%;
+}
+
+.ytname{
+    width: 100%;
+    height: 100px;
+    background: rgba(223, 230, 233, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    margin: 0 15px;
+    /* border: 2px solid red; */
+    box-shadow: 5px 3px 3px 2px #dfe6e9;
+    margin-left: 0 150px;
+
+}
+
+.ytname div{
+    align-self: center;
+    margin: 0 15px;
+
+}
+
+.c-name{
+    position: absolute;
+    top: 30px;
+    left: 40;
+    margin: 0 30px;
+}
+
+.subscribed{
+    position: absolute;
+    top: 50px;
+    left: 25;
+    margin: 0 30px;
+    margin-top: 2px;
+    font-size: small;
+    color: grey;
+}
+
+.ytname img {
+
+    width: 50px;
+    border-radius: 50% ;
+    border: 2px solid white;
+    
+    
+}
+
+.subscribe-button{
+
+}
+
+.subscribe-button a{
+    text-decoration: none;
+    color: black;
+    margin: 0 5px;
+}
+
+
+
+
+
+/* ===========mobile version  css====*/
+
+.nav2formobile{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 6vh;
+    box-shadow: 5px 5px 5px 10px #dfe6e9;
+
+}
+
+.nav2formobile a{
+    text-decoration: none;
+    color: black;
+    font-size: 11px;
+}
+
+.nav2formobile i {
+    padding: 3px 0;
+    font-size: large;
+    
+}
+
+.searchmobileversion{
+    margin: 0 8px;
+    padding: 10px ;
+}
+
+.searchmobileversion i {
+    padding: 12px;
+    font-size: 18px
+}
+
+
+
+/*===========XX mobile version css XX=====*/
+
+
+/*=========== media query ========*/
+
+@media screen and (max-width: 620px){
+
+    .search label  {
+        display: none;
+    }
+    #mic{
+        display: none;
+    }
+
+    .search input i {
+        display: none;
+    }
+
+    .logo img {
+        width: 80px;
+        margin: 2px;
+    }
+
+
+    .r-icons {
+        display: none;
+    }
+
+    #menubar{
+        display: none;
+    }
+
+    .nav2{
+        display: none;
+    }
+
+    .ytname{
+        margin: 2px;
+        justify-content: space-between;
+    }
+
+    .c-name{
+        margin: 0;
+    }
+
+    .subscribed{
+        margin: 0;
+    }
+
+}
+
+
+
+/*==== media query for desktop version ====*/
+@media screen and (min-width: 650px){
+    .nav2formobile{
+        display: none;
+    }
+
+    .searchmobileversion{
+        display: none;
+    }
+
+    
+}
+
+/*====XX media query for desktop version ==== XX */
+
+
+/* =====medium device media query======== */
+
+@media screen and (min-width: 700px) and (max-width: 850px) {
+
+    
+
+    .r-icons i {
+        margin: 0px 8px;
+        font-size: 25px;
+    }
+
+    
+
+}
+    
+
+
+
+/* ===XX medium device media query XX====== */
+
