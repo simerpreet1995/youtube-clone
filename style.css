@@ -224,12 +224,14 @@
     
 }
 
-/* .wrapper{
-   height: 100vh;
+.wrapper{
+   /* height: 100vh; */
    width: 100vw;
    background: #dfe6e9; 
    margin-top: 20px 0;
-} */
+   box-shadow: 1px 1px 2px 3px ;
+   margin-bottom: 5px;
+}
 
 
 
@@ -257,6 +259,38 @@
 
 .c-info{
     margin: 15px 0;
+}
+
+.popular-video-wrapper{
+    width: 100%;
+    height: 100%;
+
+}
+
+#popular-upload-h{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.popular-videos{
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    overflow-x: auto;
+    justify-content: space-between;
+    margin: 0px 115px;
+}
+
+.popular-videos::-webkit-scrollbar{
+    display: none;
+}
+
+.popular-videos div iframe{
+    margin: 5px;
 }
 
 /* ===========mobile version  css====*/
@@ -369,7 +403,12 @@
         font-weight: 500;
     }
 
-
+    .popular-videos{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin: 5px;
+    }
     
 
     .yt-video-mobile iframe {
@@ -389,7 +428,7 @@
     .yt-video-mobile{
         display: block;
         margin: 15px;
-        border-bottom: 2px solid black;
+        /* border-bottom: 2px solid black; */
     }
 
     
@@ -399,15 +438,21 @@
     }
 
     .wrapper{
-   height: 100vh;
+   height: auto;
    width: 100vw;
    background: #dfe6e9; 
-}
 
 }
 
+}
 
-
+/* media query for 280 bell icon */
+@media screen and (max-width:280px){
+    .ytname{
+        justify-content: space-between;
+    }
+    
+}
 /*==== media query for desktop version ====*/
 @media screen and (min-width: 690px){
     .nav2formobile{
