@@ -6,12 +6,15 @@
 }
 
 .nav1{
-    width: 100%;
+    width: 100vw;
     height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     box-shadow: 0px 1px 3px gray ;
+    position: sticky;
+    top: 0;
+    background: white;
 }
 .logo img{
     width: 100px;
@@ -76,6 +79,9 @@
     z-index: 1;
     background-color: white;
     box-shadow: 5px 5px 5px 5px #dfe6e9;
+    position: fixed;
+    top: 0;
+    left: 0;
     
 }
 
@@ -105,7 +111,7 @@
 
 .cart{
     width: 100vw;
-    height: 250px;
+    height: 150px;
     margin: auto;
 }
 
@@ -116,7 +122,7 @@
 
 .ytname{
     width: 100%;
-    height: 100px;
+    height: 80px;
     background: rgba(223, 230, 233, 0.2);
     display: flex;
     flex-direction: row;
@@ -127,15 +133,10 @@
     margin: 0 15px;
     /* border: 2px solid red; */
     box-shadow: 5px 3px 3px 2px #dfe6e9;
-    margin-left: 0 150px;
-
+    cursor: pointer;
 }
 
-.ytname div{
-    align-self: center;
-    margin: 0 15px;
 
-}
 
 .c-name{
     position: absolute;
@@ -150,7 +151,7 @@
     left: 25;
     margin: 0 30px;
     margin-top: 2px;
-    font-size: small;
+    font-size: smaller;
     color: grey;
 }
 
@@ -159,23 +160,99 @@
     width: 50px;
     border-radius: 50% ;
     border: 2px solid white;
-    
+
+    margin-right: 15px;
     
 }
 
-.subscribe-button{
+.subscribe-button {
+    cursor: pointer;
 
 }
+
+.s-text{
+    background-color: #dfe6e9;
+    padding: 5px 8px;
+}
+
+
 
 .subscribe-button a{
     text-decoration: none;
     color: black;
     margin: 0 5px;
+   
 }
 
 
+.ytmenus{
+    width: 100%;
+    height: 40px;
+    background: rgba(233, 230, 233, 0.2);
+    padding: 0px 100px;
+    /* border: 2px solid black; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.ytmenus a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: #636e72;
+}
+
+.ytmenus a:first-child{
+    border-bottom: 2px solid #636e72;
+}
+
+.ytmenus a:hover{
+    color: black;
+}
+
+.yt-video{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+    /* background: rgba(233, 230, 233, 0.3); */
+    
+}
+
+.wrapper{
+   height: 100vh;
+   width: 100vw;
+   background: #dfe6e9; 
+}
+
+/* .yt-video iframe{
+    margin-top: 80px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+} */
 
 
+.yt-video h2{
+    width: 50%;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.ytvideo {
+    /* flex-basis: 50%; */
+}
+
+.ytdes{
+    /* flex-basis: 50%; */
+    width: 50%;
+    margin-left: 30px;
+}
 
 /* ===========mobile version  css====*/
 
@@ -189,17 +266,18 @@
     width: 100%;
     height: 6vh;
     box-shadow: 5px 5px 5px 10px #dfe6e9;
-
+    background: black;
+    
 }
 
 .nav2formobile a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 11px;
 }
 
 .nav2formobile i {
-    padding: 3px 0;
+    padding: 5px 7px;
     font-size: large;
     
 }
@@ -212,6 +290,10 @@
 .searchmobileversion i {
     padding: 12px;
     font-size: 18px
+}
+
+.yt-video-mobile{
+    display: none;
 }
 
 
@@ -253,6 +335,7 @@
     }
 
     .ytname{
+        font-size: 12px;
         margin: 2px;
         justify-content: space-between;
     }
@@ -263,6 +346,56 @@
 
     .subscribed{
         margin: 0;
+    }
+
+
+    .ytmenus{
+        margin-top: 5px;
+    }
+
+    .ytmenus a{
+        padding: 5px 8px;
+        font-size: 9px;
+    }
+
+
+    /* .yt-video{
+        margin: 12px;
+        width: 100%;
+    }
+    .yt-video iframe{
+        width: 80%;
+    } */
+
+    /* .yt-video iframe{
+        margin: 0px;
+        width: 70vw;
+        flex-direction: ;
+    } */
+
+    .yt-video-mobile iframe {
+        width: 80vw;
+    }
+
+
+    .yt-video-mobile h2{
+        font-weight: 500;
+        font-size: 15px;
+        margin-top: 8px;
+    }
+
+    
+
+    .yt-video-mobile{
+        display: block;
+        margin: 15px;
+        border-bottom: 2px solid black;
+    }
+
+    
+
+    .c-info{
+        display: none;
     }
 
 }
@@ -279,9 +412,19 @@
         display: none;
     }
 
+    /* .yt-video-mobile{
+        display: none;
+    } */
+
     
 }
 
+
+@media screen and (max-width:700px) {
+    .yt-video{
+        display: none;
+    }
+}
 /*====XX media query for desktop version ==== XX */
 
 
@@ -296,8 +439,15 @@
         font-size: 25px;
     }
 
-    
+    .ytmenus a{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
 
+
+    .c-info{
+        display: none;
+    }
 }
     
 
